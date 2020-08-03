@@ -5,4 +5,4 @@ function greetUser() {
   console.log(`Hello, ${userName}`);
 }
 
-export { greetUser };
+export default greetUser;
