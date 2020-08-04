@@ -21,7 +21,7 @@ function startGameFlow({
     const currentQuestion = pairs.car(questionAnswerPair)();
     console.log(`Question: ${currentQuestion}`);
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = pairs.cdr(questionAnswerPair)(currentQuestion);
+    const correctAnswer = String(pairs.cdr(questionAnswerPair)(currentQuestion));
 
     questionsAsked += 1;
 
