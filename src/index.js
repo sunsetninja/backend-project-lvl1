@@ -5,10 +5,8 @@ import { getUserName, greetUser } from './cli.js';
 function startGameFlow({
   questionsCount = 3,
   rules,
-  questionAnswerPair,
+  generateQuestion,
 }) {
-  if (!pairs.isPair(questionAnswerPair)) return;
-
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
   greetUser(userName);
@@ -18,10 +16,12 @@ function startGameFlow({
   let correctAnswersCount = 0;
 
   while (questionsAsked < questionsCount) {
-    const currentQuestion = pairs.car(questionAnswerPair)();
+    const question = generateQuestion();
+    if (!pairs.isPair(question)) return;
+    const currentQuestion = pairs.car(question);
     console.log(`Question: ${currentQuestion}`);
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = String(pairs.cdr(questionAnswerPair)(currentQuestion));
+    const correctAnswer = pairs.cdr(question);
 
     questionsAsked += 1;
 
