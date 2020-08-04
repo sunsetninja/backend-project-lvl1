@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/sunsetninja/backend-project-lvl1#readme",
   "dependencies": {
+    "@hexlet/pairs": "^1.0.15",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
