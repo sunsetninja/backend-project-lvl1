@@ -1,7 +1,7 @@
-export function getRandomIntFromInterval(min, max) {
+function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-export function isEven(number) {
-  return number % 2 === 0;
-}
+export default {
+  getRandomInt,
+};
