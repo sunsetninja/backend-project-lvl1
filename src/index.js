@@ -1,6 +1,7 @@
-import readlineSync from 'readline-sync';
 import pairs from '@hexlet/pairs';
-import { getUserName, greetUser, log } from './cli.js';
+import {
+  getUserName, greetUser, log, askQuestion,
+} from './cli.js';
 
 function startGameFlow({
   questionsCount = 3,
@@ -20,7 +21,7 @@ function startGameFlow({
     if (!pairs.isPair(question)) return;
     const currentQuestion = pairs.car(question);
     log(`Question: ${currentQuestion}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = askQuestion('Your answer: ');
     const correctAnswer = pairs.cdr(question);
 
     questionsAsked += 1;
