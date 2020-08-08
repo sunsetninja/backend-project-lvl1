@@ -8,9 +8,9 @@ function generateQuestionAnswerPair() {
   const length = utils.getRandomInt(8, 10);
   const secretIndex = utils.getRandomInt(0, length - 1);
 
-  const progression = [startFrom];
+  const progression = [];
 
-  for (let i = 1; i < length; i += 1) {
+  for (let i = 0; i < length; i += 1) {
     progression.push(startFrom + (i * delta));
   }
 
