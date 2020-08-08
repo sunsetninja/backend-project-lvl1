@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import {
-  getUserName, greetUser, log, askQuestion,
+  log, askQuestion,
 } from './cli.js';
 
 function playGameFlow(
@@ -9,8 +9,8 @@ function playGameFlow(
   questionsCount = 3,
 ) {
   log('Welcome to the Brain Games!');
-  const userName = getUserName();
-  greetUser(userName);
+  const userName = askQuestion('May I have your name?: ');
+  log(`Hello, ${userName}`);
   log(gameRule);
 
   let questionsAsked = 0;
