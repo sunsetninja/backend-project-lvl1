@@ -18,7 +18,6 @@ function playGameFlow(
 
   while (questionsAsked < questionsCount) {
     const question = generateQuestionAnswerPair();
-    if (!pairs.isPair(question)) return;
     const currentQuestion = pairs.car(question);
     log(`Question: ${currentQuestion}`);
     const answer = askQuestion('Your answer: ');
