@@ -15,7 +15,10 @@ function isPrime(number) {
 function generateQuestionAnswerPair() {
   const num = utils.getRandomInt(1, 100);
 
-  return pairs.cons(String(num), isPrime(num) ? 'yes' : 'no');
+  const question = String(num);
+  const answer = isPrime(num) ? 'yes' : 'no';
+
+  return pairs.cons(question, answer);
 }
 
 function startGame() {

@@ -18,7 +18,10 @@ function generateQuestionAnswerPair() {
 
   progression[secretIndex] = '..';
 
-  return pairs.cons(progression.join(' '), String(secret));
+  const question = progression.join(' ');
+  const answer = String(secret);
+
+  return pairs.cons(question, answer);
 }
 
 function startGame() {

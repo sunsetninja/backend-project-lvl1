@@ -19,9 +19,10 @@ function generateQuestionAnswerPair() {
     }
   }
 
-  const expression = `${utils.getRandomInt(1, 10)} ${operators[utils.getRandomInt(0, 2)]} ${utils.getRandomInt(1, 10)}`;
+  const question = `${utils.getRandomInt(1, 10)} ${operators[utils.getRandomInt(0, 2)]} ${utils.getRandomInt(1, 10)}`;
+  const answer = String(getCorrectAnswer(question));
 
-  return pairs.cons(expression, String(getCorrectAnswer(expression)));
+  return pairs.cons(question, answer);
 }
 
 function startGame() {

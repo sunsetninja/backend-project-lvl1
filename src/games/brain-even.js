@@ -9,7 +9,10 @@ function isEven(number) {
 function generateQuestionAnswerPair() {
   const num = utils.getRandomInt(1, 100);
 
-  return pairs.cons(String(num), isEven(num) ? 'yes' : 'no');
+  const question = String(num);
+  const answer = isEven(num) ? 'yes' : 'no';
+
+  return pairs.cons(question, answer);
 }
 
 function startGame() {

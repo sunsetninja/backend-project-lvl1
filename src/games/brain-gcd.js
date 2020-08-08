@@ -23,7 +23,10 @@ function generateQuestionAnswerPair() {
     utils.getRandomInt(1, 100),
   ];
 
-  return pairs.cons(nums.join(' '), String(findGcd(nums)));
+  const question = nums.join(' ');
+  const answer = String(findGcd(nums));
+
+  return pairs.cons(question, answer);
 }
 
 function startGame() {
