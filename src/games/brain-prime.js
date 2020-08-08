@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import utils from '../utils.js';
-import startGameFlow from '../index.js';
+import playGameFlow from '../index.js';
 
 function isPrime(number) {
   for (let i = 2; i < number; i += 1) {
@@ -22,7 +22,7 @@ function generateQuestionAnswerPair() {
 }
 
 function startGame() {
-  startGameFlow({
+  playGameFlow({
     rules: 'Answer "yes" if given number is prime. Otherwise answer "no".',
     generateQuestionAnswerPair,
   });

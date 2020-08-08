@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import utils from '../utils.js';
-import startGameFlow from '../index.js';
+import playGameFlow from '../index.js';
 
 function generateQuestionAnswerPair() {
   const operators = ['+', '-', '*'];
@@ -26,7 +26,7 @@ function generateQuestionAnswerPair() {
 }
 
 function startGame() {
-  startGameFlow({
+  playGameFlow({
     rules: 'What is the result of the expression?',
     generateQuestionAnswerPair,
   });

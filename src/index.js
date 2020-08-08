@@ -3,7 +3,7 @@ import {
   getUserName, greetUser, log, askQuestion,
 } from './cli.js';
 
-function startGameFlow({
+function playGameFlow({
   questionsCount = 3,
   rules,
   generateQuestionAnswerPair,
@@ -42,4 +42,4 @@ function startGameFlow({
   }
 }
 
-export default startGameFlow;
+export default playGameFlow;
