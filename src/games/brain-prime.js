@@ -1,5 +1,5 @@
 import pairs from '@hexlet/pairs';
-import utils from '../utils.js';
+import { getRandomInt } from '../utils.js';
 import playGameFlow from '../index.js';
 
 function isPrime(number) {
@@ -13,7 +13,7 @@ function isPrime(number) {
 }
 
 function generateQuestionAnswerPair() {
-  const num = utils.getRandomInt(1, 100);
+  const num = getRandomInt(1, 100);
 
   const question = String(num);
   const answer = isPrime(num) ? 'yes' : 'no';

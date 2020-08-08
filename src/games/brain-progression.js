@@ -1,12 +1,12 @@
 import pairs from '@hexlet/pairs';
-import utils from '../utils.js';
+import { getRandomInt } from '../utils.js';
 import playGameFlow from '../index.js';
 
 function generateQuestionAnswerPair() {
-  const startFrom = utils.getRandomInt(1, 100);
-  const delta = utils.getRandomInt(2, 10);
-  const length = utils.getRandomInt(8, 10);
-  const secretIndex = utils.getRandomInt(0, length - 1);
+  const startFrom = getRandomInt(1, 100);
+  const delta = getRandomInt(2, 10);
+  const length = getRandomInt(8, 10);
+  const secretIndex = getRandomInt(0, length - 1);
 
   const progression = [];
 

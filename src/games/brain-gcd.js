@@ -1,5 +1,5 @@
 import pairs from '@hexlet/pairs';
-import utils from '../utils.js';
+import { getRandomInt } from '../utils.js';
 import playGameFlow from '../index.js';
 
 function generateQuestionAnswerPair() {
@@ -19,8 +19,8 @@ function generateQuestionAnswerPair() {
   }
 
   const nums = [
-    utils.getRandomInt(1, 100),
-    utils.getRandomInt(1, 100),
+    getRandomInt(1, 100),
+    getRandomInt(1, 100),
   ];
 
   const question = nums.join(' ');
