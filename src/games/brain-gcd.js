@@ -3,9 +3,9 @@ import utils from '../utils.js';
 import playGameFlow from '../index.js';
 
 function generateQuestionAnswerPair() {
-  function findGcd(nums) {
-    let numA = Number(nums[0]);
-    let numB = Number(nums[1]);
+  function findGcd(paramNumA, paramNumB) {
+    let numA = paramNumA;
+    let numB = paramNumB;
 
     while (numA !== 0 && numB !== 0) {
       if (numA > numB) {
@@ -24,7 +24,7 @@ function generateQuestionAnswerPair() {
   ];
 
   const question = nums.join(' ');
-  const answer = String(findGcd(nums));
+  const answer = String(findGcd(nums[0], nums[1]));
 
   return pairs.cons(question, answer);
 }
