@@ -14,7 +14,6 @@ function playGameFlow(
   log(gameRule);
 
   let questionsAsked = 0;
-  let correctAnswersCount = 0;
 
   while (questionsAsked < questionsCount) {
     const question = generateQuestionAnswerPair();
@@ -27,18 +26,14 @@ function playGameFlow(
 
     if (answer === correctAnswer) {
       log('Correct!');
-      correctAnswersCount += 1;
     } else {
       log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-      break;
+      log(`Let's try again, ${userName}!`);
+      return;
     }
   }
 
-  if (correctAnswersCount === questionsCount) {
-    log(`Congratulations, ${userName}!`);
-  } else {
-    log(`Let's try again, ${userName}!`);
-  }
+  log(`Congratulations, ${userName}!`);
 }
 
 export default playGameFlow;
