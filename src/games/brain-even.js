@@ -6,7 +6,7 @@ function isEven(number) {
   return number % 2 === 0;
 }
 
-function generateQuestion() {
+function generateQuestionAnswerPair() {
   const num = utils.getRandomInt(1, 100);
 
   return pairs.cons(String(num), isEven(num) ? 'yes' : 'no');
@@ -15,7 +15,7 @@ function generateQuestion() {
 function startGame() {
   startGameFlow({
     rules: 'Answer "yes" if the number is even, otherwise answer "no".',
-    generateQuestion,
+    generateQuestionAnswerPair,
   });
 }
 

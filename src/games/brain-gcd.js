@@ -2,7 +2,7 @@ import pairs from '@hexlet/pairs';
 import utils from '../utils.js';
 import startGameFlow from '../index.js';
 
-function generateQuestion() {
+function generateQuestionAnswerPair() {
   function findGcd(nums) {
     let numA = Number(nums[0]);
     let numB = Number(nums[1]);
@@ -29,7 +29,7 @@ function generateQuestion() {
 function startGame() {
   startGameFlow({
     rules: 'Find the greatest common divisor of given numbers.',
-    generateQuestion,
+    generateQuestionAnswerPair,
   });
 }
 

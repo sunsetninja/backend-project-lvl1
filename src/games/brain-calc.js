@@ -2,7 +2,7 @@ import pairs from '@hexlet/pairs';
 import utils from '../utils.js';
 import startGameFlow from '../index.js';
 
-function generateQuestion() {
+function generateQuestionAnswerPair() {
   const operators = ['+', '-', '*'];
   function getCorrectAnswer(question) {
     const [operandA, operator, operandB] = question.split(' ');
@@ -27,7 +27,7 @@ function generateQuestion() {
 function startGame() {
   startGameFlow({
     rules: 'What is the result of the expression?',
-    generateQuestion,
+    generateQuestionAnswerPair,
   });
 }
 

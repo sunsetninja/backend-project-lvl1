@@ -12,7 +12,7 @@ function isPrime(number) {
   return number > 1;
 }
 
-function generateQuestion() {
+function generateQuestionAnswerPair() {
   const num = utils.getRandomInt(1, 100);
 
   return pairs.cons(String(num), isPrime(num) ? 'yes' : 'no');
@@ -21,7 +21,7 @@ function generateQuestion() {
 function startGame() {
   startGameFlow({
     rules: 'Answer "yes" if given number is prime. Otherwise answer "no".',
-    generateQuestion,
+    generateQuestionAnswerPair,
   });
 }
 

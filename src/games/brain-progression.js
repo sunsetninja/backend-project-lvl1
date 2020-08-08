@@ -2,7 +2,7 @@ import pairs from '@hexlet/pairs';
 import utils from '../utils.js';
 import startGameFlow from '../index.js';
 
-function generateQuestion() {
+function generateQuestionAnswerPair() {
   const startFrom = utils.getRandomInt(1, 100);
   const delta = utils.getRandomInt(2, 10);
   const length = utils.getRandomInt(8, 10);
@@ -24,7 +24,7 @@ function generateQuestion() {
 function startGame() {
   startGameFlow({
     rules: 'What number is missing in the progression?',
-    generateQuestion,
+    generateQuestionAnswerPair,
   });
 }
 
