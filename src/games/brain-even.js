@@ -16,10 +16,10 @@ function generateQuestionAnswerPair() {
 }
 
 function startGame() {
-  playGameFlow({
-    rules: 'Answer "yes" if the number is even, otherwise answer "no".',
+  playGameFlow(
+    'Answer "yes" if the number is even, otherwise answer "no".',
     generateQuestionAnswerPair,
-  });
+  );
 }
 
 export default startGame;

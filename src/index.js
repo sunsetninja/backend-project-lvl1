@@ -3,15 +3,15 @@ import {
   getUserName, greetUser, log, askQuestion,
 } from './cli.js';
 
-function playGameFlow({
-  questionsCount = 3,
-  rules,
+function playGameFlow(
+  gameRule,
   generateQuestionAnswerPair,
-}) {
+  questionsCount = 3,
+) {
   log('Welcome to the Brain Games!');
   const userName = getUserName();
   greetUser(userName);
-  log(rules);
+  log(gameRule);
 
   let questionsAsked = 0;
   let correctAnswersCount = 0;

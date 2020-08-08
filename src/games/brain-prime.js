@@ -22,10 +22,10 @@ function generateQuestionAnswerPair() {
 }
 
 function startGame() {
-  playGameFlow({
-    rules: 'Answer "yes" if given number is prime. Otherwise answer "no".',
+  playGameFlow(
+    'Answer "yes" if given number is prime. Otherwise answer "no".',
     generateQuestionAnswerPair,
-  });
+  );
 }
 
 export default startGame;

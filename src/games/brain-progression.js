@@ -25,10 +25,10 @@ function generateQuestionAnswerPair() {
 }
 
 function startGame() {
-  playGameFlow({
-    rules: 'What number is missing in the progression?',
+  playGameFlow(
+    'What number is missing in the progression?',
     generateQuestionAnswerPair,
-  });
+  );
 }
 
 export default startGame;

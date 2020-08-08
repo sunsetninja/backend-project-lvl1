@@ -26,10 +26,10 @@ function generateQuestionAnswerPair() {
 }
 
 function startGame() {
-  playGameFlow({
-    rules: 'What is the result of the expression?',
+  playGameFlow(
+    'What is the result of the expression?',
     generateQuestionAnswerPair,
-  });
+  );
 }
 
 export default startGame;

@@ -30,10 +30,10 @@ function generateQuestionAnswerPair() {
 }
 
 function startGame() {
-  playGameFlow({
-    rules: 'Find the greatest common divisor of given numbers.',
+  playGameFlow(
+    'Find the greatest common divisor of given numbers.',
     generateQuestionAnswerPair,
-  });
+  );
 }
 
 export default startGame;
