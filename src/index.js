@@ -3,10 +3,11 @@ import {
   log, askQuestion,
 } from './cli.js';
 
+const questionsCount = 3;
+
 function playGame(
   gameRule,
   generateQuestionAnswer,
-  questionsCount = 3,
 ) {
   log('Welcome to the Brain Games!');
   const userName = askQuestion('May I have your name?: ');
