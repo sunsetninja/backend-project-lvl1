@@ -24,9 +24,11 @@ function generateQuestionAnswer() {
   return pairs.cons(question, answer);
 }
 
+const gameRule = 'What number is missing in the progression?';
+
 function startGame() {
   playGameFlow(
-    'What number is missing in the progression?',
+    gameRule,
     generateQuestionAnswer,
   );
 }

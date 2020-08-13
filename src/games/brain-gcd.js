@@ -29,9 +29,11 @@ function generateQuestionAnswer() {
   return pairs.cons(question, answer);
 }
 
+const gameRule = 'Find the greatest common divisor of given numbers.';
+
 function startGame() {
   playGameFlow(
-    'Find the greatest common divisor of given numbers.',
+    gameRule,
     generateQuestionAnswer,
   );
 }

@@ -15,9 +15,11 @@ function generateQuestionAnswer() {
   return pairs.cons(question, answer);
 }
 
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 function startGame() {
   playGameFlow(
-    'Answer "yes" if the number is even, otherwise answer "no".',
+    gameRule,
     generateQuestionAnswer,
   );
 }

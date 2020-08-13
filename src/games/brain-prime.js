@@ -25,9 +25,11 @@ function generateQuestionAnswer() {
   return pairs.cons(question, answer);
 }
 
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function startGame() {
   playGameFlow(
-    'Answer "yes" if given number is prime. Otherwise answer "no".',
+    gameRule,
     generateQuestionAnswer,
   );
 }

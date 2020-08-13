@@ -28,9 +28,11 @@ function generateQuestionAnswer() {
   return pairs.cons(question, answer);
 }
 
+const gameRule = 'What is the result of the expression?';
+
 function startGame() {
   playGameFlow(
-    'What is the result of the expression?',
+    gameRule,
     generateQuestionAnswer,
   );
 }
