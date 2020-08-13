@@ -18,13 +18,11 @@ function findGcd(paramNumA, paramNumB) {
 }
 
 function generateQuestionAnswer() {
-  const nums = [
-    getRandomInt(1, 100),
-    getRandomInt(1, 100),
-  ];
+  const numA = getRandomInt(1, 100);
+  const numB = getRandomInt(1, 100);
 
-  const question = nums.join(' ');
-  const answer = String(findGcd(nums[0], nums[1]));
+  const question = `${numA} ${numB}`;
+  const answer = String(findGcd(numA, numB));
 
   return pairs.cons(question, answer);
 }
