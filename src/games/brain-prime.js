@@ -16,7 +16,7 @@ function isPrime(number) {
   return true;
 }
 
-function generateQuestionAnswerPair() {
+function generateQuestionAnswer() {
   const num = getRandomInt(1, 100);
 
   const question = String(num);
@@ -28,7 +28,7 @@ function generateQuestionAnswerPair() {
 function startGame() {
   playGameFlow(
     'Answer "yes" if given number is prime. Otherwise answer "no".',
-    generateQuestionAnswerPair,
+    generateQuestionAnswer,
   );
 }
 

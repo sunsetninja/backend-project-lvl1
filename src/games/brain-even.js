@@ -6,7 +6,7 @@ function isEven(number) {
   return number % 2 === 0;
 }
 
-function generateQuestionAnswerPair() {
+function generateQuestionAnswer() {
   const num = getRandomInt(1, 100);
 
   const question = String(num);
@@ -18,7 +18,7 @@ function generateQuestionAnswerPair() {
 function startGame() {
   playGameFlow(
     'Answer "yes" if the number is even, otherwise answer "no".',
-    generateQuestionAnswerPair,
+    generateQuestionAnswer,
   );
 }
 

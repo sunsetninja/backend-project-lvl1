@@ -5,7 +5,7 @@ import {
 
 function playGameFlow(
   gameRule,
-  generateQuestionAnswerPair,
+  generateQuestionAnswer,
   questionsCount = 3,
 ) {
   log('Welcome to the Brain Games!');
@@ -16,7 +16,7 @@ function playGameFlow(
   let questionsAsked = 0;
 
   while (questionsAsked < questionsCount) {
-    const question = generateQuestionAnswerPair();
+    const question = generateQuestionAnswer();
     const currentQuestion = pairs.car(question);
     log(`Question: ${currentQuestion}`);
     const answer = askQuestion('Your answer: ');

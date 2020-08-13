@@ -16,7 +16,7 @@ function getCorrectAnswer(operandA, operator, operandB) {
   }
 }
 
-function generateQuestionAnswerPair() {
+function generateQuestionAnswer() {
   const [operandA, operator, operandB] = [
     getRandomInt(1, 10),
     operators[getRandomInt(0, 2)],
@@ -31,7 +31,7 @@ function generateQuestionAnswerPair() {
 function startGame() {
   playGameFlow(
     'What is the result of the expression?',
-    generateQuestionAnswerPair,
+    generateQuestionAnswer,
   );
 }
 
