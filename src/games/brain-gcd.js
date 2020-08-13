@@ -2,22 +2,22 @@ import pairs from '@hexlet/pairs';
 import { getRandomInt } from '../utils.js';
 import playGame from '../index.js';
 
-function generateQuestionAnswer() {
-  function findGcd(paramNumA, paramNumB) {
-    let numA = paramNumA;
-    let numB = paramNumB;
+function findGcd(paramNumA, paramNumB) {
+  let numA = paramNumA;
+  let numB = paramNumB;
 
-    while (numA !== 0 && numB !== 0) {
-      if (numA > numB) {
-        numA %= numB;
-      } else {
-        numB %= numA;
-      }
+  while (numA !== 0 && numB !== 0) {
+    if (numA > numB) {
+      numA %= numB;
+    } else {
+      numB %= numA;
     }
-
-    return numA + numB;
   }
 
+  return numA + numB;
+}
+
+function generateQuestionAnswer() {
   const nums = [
     getRandomInt(1, 100),
     getRandomInt(1, 100),
