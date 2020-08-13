@@ -4,8 +4,6 @@ install-ci:
 	npm ci
 lint:
 	npx eslint .
-brain-games:
-	node bin/games.js
 brain-even:
 	node bin/even.js
 brain-calc:
