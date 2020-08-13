@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import { getRandomInt } from '../utils.js';
-import playGameFlow from '../index.js';
+import playGame from '../index.js';
 
 const operators = ['+', '-', '*'];
 function getCorrectAnswer(operandA, operator, operandB) {
@@ -31,7 +31,7 @@ function generateQuestionAnswer() {
 const gameRule = 'What is the result of the expression?';
 
 function startGame() {
-  playGameFlow(
+  playGame(
     gameRule,
     generateQuestionAnswer,
   );

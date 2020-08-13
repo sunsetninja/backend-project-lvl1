@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import { getRandomInt } from '../utils.js';
-import playGameFlow from '../index.js';
+import playGame from '../index.js';
 
 function generateQuestionAnswer() {
   const startFrom = getRandomInt(1, 100);
@@ -27,7 +27,7 @@ function generateQuestionAnswer() {
 const gameRule = 'What number is missing in the progression?';
 
 function startGame() {
-  playGameFlow(
+  playGame(
     gameRule,
     generateQuestionAnswer,
   );

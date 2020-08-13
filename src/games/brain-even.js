@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import { getRandomInt } from '../utils.js';
-import playGameFlow from '../index.js';
+import playGame from '../index.js';
 
 function isEven(number) {
   return number % 2 === 0;
@@ -18,7 +18,7 @@ function generateQuestionAnswer() {
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function startGame() {
-  playGameFlow(
+  playGame(
     gameRule,
     generateQuestionAnswer,
   );

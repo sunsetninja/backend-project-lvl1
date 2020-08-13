@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import { getRandomInt } from '../utils.js';
-import playGameFlow from '../index.js';
+import playGame from '../index.js';
 
 function isPrime(number) {
   if (number < 2) {
@@ -28,7 +28,7 @@ function generateQuestionAnswer() {
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function startGame() {
-  playGameFlow(
+  playGame(
     gameRule,
     generateQuestionAnswer,
   );

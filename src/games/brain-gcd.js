@@ -1,6 +1,6 @@
 import pairs from '@hexlet/pairs';
 import { getRandomInt } from '../utils.js';
-import playGameFlow from '../index.js';
+import playGame from '../index.js';
 
 function generateQuestionAnswer() {
   function findGcd(paramNumA, paramNumB) {
@@ -32,7 +32,7 @@ function generateQuestionAnswer() {
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 function startGame() {
-  playGameFlow(
+  playGame(
     gameRule,
     generateQuestionAnswer,
   );

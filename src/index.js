@@ -3,7 +3,7 @@ import {
   log, askQuestion,
 } from './cli.js';
 
-function playGameFlow(
+function playGame(
   gameRule,
   generateQuestionAnswer,
   questionsCount = 3,
@@ -36,4 +36,4 @@ function playGameFlow(
   log(`Congratulations, ${userName}!`);
 }
 
-export default playGameFlow;
+export default playGame;
