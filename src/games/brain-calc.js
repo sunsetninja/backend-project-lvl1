@@ -5,11 +5,11 @@ import playGame from '../index.js';
 const operators = ['+', '-', '*'];
 function getCorrectAnswer(operandA, operator, operandB) {
   switch (operator) {
-    case operators[0]:
+    case '+':
       return operandA + operandB;
-    case operators[1]:
+    case '-':
       return operandA - operandB;
-    case operators[2]:
+    case '*':
       return operandA * operandB;
     default:
       return null;
@@ -19,7 +19,7 @@ function getCorrectAnswer(operandA, operator, operandB) {
 function generateQuestionAnswer() {
   const [operandA, operator, operandB] = [
     getRandomInt(1, 10),
-    operators[getRandomInt(0, 2)],
+    operators[getRandomInt(0, operators.length - 1)],
     getRandomInt(1, 10),
   ];
   const question = `${operandA} ${operator} ${operandB}`;
